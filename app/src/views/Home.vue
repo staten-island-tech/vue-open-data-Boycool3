@@ -1,6 +1,16 @@
 <template>
     <p>Hi</p>
     <button @click="getData"> Test Thing</button>
+    <select name="school" id="school">
+      <option value="">Choose a School</option>
+      <option> <SchoolThing
+      v-for="school in Thing"
+      :key="school.school_name"
+      :school="school"
+    >
+    </SchoolThing>
+      </option>
+    </select>
     <div class="container">
       <SchoolThing
       v-for="school in Thing"
@@ -23,6 +33,15 @@ async function getData  () {
   const data = await response.json()
   Thing.value = data
 }
+/*
+Thing.forEach(school => {
+  const option = 
+  
+});
+       {{v-for=`school in Thing` 
+        :value=`school.school_name` 
+        :key=`school.school_name`}}
+*/
 </script>
 
 <style scoped>
