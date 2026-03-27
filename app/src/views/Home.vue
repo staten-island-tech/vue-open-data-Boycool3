@@ -1,15 +1,13 @@
 <template>
     <p>Hi</p>
-    <button @click="getData"> Test Thing</button>
     <select name="school" id="school">
       <option value="">Choose a School</option>
-      <option> <SchoolThing
+      <Optione
       v-for="school in Thing"
       :key="school.school_name"
       :school="school"
     >
-    </SchoolThing>
-      </option>
+    </Optione>
     </select>
     <div class="container">
       <SchoolThing
@@ -23,9 +21,11 @@
 </template>
 
 <script setup>
+import Optione from '@/Components/optione.vue'
 import SchoolThing from '@/Components/SchoolThing.vue'
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+onMounted(() => {getData()})
 const route = useRoute()
 const Thing = ref()
 async function getData  () {
