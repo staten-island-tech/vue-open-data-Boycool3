@@ -1,5 +1,4 @@
 <template>
-    <p>Hi</p>
     <select name="school" id="school">
       <option value="">Choose a School</option>
       <Optione
@@ -52,7 +51,7 @@ Thing.forEach(school => {
   align-items: center;
   justify-content: space-around;
   height: auto;
-  width: 1875px;
+  width: 100%;
   border: 3px solid rgb(255, 228, 187);
 }
 </style>
